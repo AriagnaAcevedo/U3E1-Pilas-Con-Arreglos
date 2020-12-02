@@ -1,0 +1,35 @@
+package Clases;
+public class Metodos 
+{
+    int[] Pila = new int[5];
+    int Cont=0;
+    
+    public void Insertar(int Dato)
+    {
+        Pila [Cont] = Dato;
+        Cont++;
+    }
+    
+    public void Eliminar()
+    {
+        if (Cont==0)
+        {
+            System.out.println("Arreglo Vacio");
+        }
+        else
+        {
+            System.out.println("El dato: " + Pila[Cont-1]+ " se ha eliminado");
+            Pila [Cont-1] = 0;
+        }
+    }
+    
+    public void Mostrar()
+    {
+        System.out.println("-------Pila-------");
+        
+        for (int i=Pila.length-1; i>=0; i--)
+        {
+            System.out.println(Pila[i]);
+        }
+    }
+}
